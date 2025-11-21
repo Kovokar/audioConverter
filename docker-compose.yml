@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: whisper_django
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app # live reload do código
+    environment:
+      PYTHONUNBUFFERED: 1
+    command: >
+      sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"

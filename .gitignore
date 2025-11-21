@@ -1,0 +1,98 @@
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.pkl
+*.p
+*.egg-info/
+*.egg
+*.log
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# DJANGO
+# =========================
+*.sqlite3
+*.db
+db.sqlite3
+media/
+staticfiles/
+static/
+*.pot
+*.mo
+
+# Arquivos temporários gerados pelo Django
+*.pid
+
+# =========================
+# AUDIO / WHISPER
+# =========================
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+*.aac
+*.opus
+/tmp/*
+temp/
+temp_audio/
+*.tmp
+
+# =========================
+# ENVIRONMENT VARIABLES
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# DOCKER
+# =========================
+docker-data/
+docker-volume/
+*.pid
+*.tar
+*.log
+compose.override.yml
+
+# =========================
+# IDE / EDITOR
+# =========================
+# VSCode
+.vscode/
+.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# =========================
+# OS / SISTEMA
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# =========================
+# MISC
+# =========================
+node_modules/
