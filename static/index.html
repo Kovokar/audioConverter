@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Transcrição de Laudos Médicos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>🏥 Sistema de Transcrição Médica</h1>
+        <p>Transcrição e correção automática de laudos médicos com IA</p>
+    </div>
+
+    <div class="container">
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">🎤</div>
+                <h3>Envie seu áudio</h3>
+                <p>Clique aqui ou arraste seu arquivo de áudio</p>
+                <p style="margin-top: 10px; font-size: 0.85em; opacity: 0.7;">Formatos aceitos: MP3, WAV, M4A, OGG</p>
+            </div>
+
+            <input type="file" id="audioFile" accept="audio/*">
+
+            <div class="file-info" id="fileInfo"></div>
+        </div>
+
+        <div class="action-section">
+            <button class="btn-transcribe" id="transcribeBtn" disabled>
+                Iniciar Transcrição
+            </button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Processando seu áudio... Isso pode levar alguns instantes.</p>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="results-section" id="resultsSection">
+            <div class="results-grid">
+                <div class="result-card original">
+                    <div class="result-header">
+                        <span class="result-icon">📝</span>
+                        <h2>Transcrição Original</h2>
+                        <span class="badge original-badge">Whisper AI</span>
+                    </div>
+                    <div class="result-content" id="originalText"></div>
+                    <button class="copy-btn" onclick="copyText('originalText')">📋 Copiar texto</button>
+                </div>
+
+                <div class="result-card corrected">
+                    <div class="result-header">
+                        <span class="result-icon">✨</span>
+                        <h2>Texto Corrigido</h2>
+                        <span class="badge corrected-badge">Gemini AI</span>
+                    </div>
+                    <div class="result-content" id="correctedText"></div>
+                    <button class="copy-btn" onclick="copyText('correctedText')">📋 Copiar texto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
